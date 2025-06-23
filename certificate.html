@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+  <section id="certificates">
+    <h1 class="section-title">My Certificates</h1>
+
+    <div class="certificate-container">
+      <div class="certificate-card">
+        <h3>Infosys Springboard</h3>
+        <p>Basics of Python</p>
+        <button onclick="viewCertificate('images/basics of python certificate.jpg', 'Infosys Springboard - Basics of Python')">View</button>
+      </div>
+      <div class="certificate-card">
+        <h3>Coursera – LearnQuest</h3>
+        <p>Oracle Database Platform</p>
+        <button onclick="viewCertificate('images/Database certificate_page-0001.jpg', 'Oracle Database Platform - Coursera')">View</button>
+      </div>
+      <div class="certificate-card">
+        <h3>Intel AI Bootcamp</h3>
+        <p>AI for Youth</p>
+        <button onclick="viewCertificate('images/AI .png', 'Intel AI Bootcamp - AI for Youth')">View</button>
+      </div>
+      <div class="certificate-card">
+        <h3>NxtWave</h3>
+        <p>Generative AI Workshop</p>
+        <button onclick="viewCertificate('images/nxtwave_cropped.jpg', 'NxtWave Workshop')">View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup certificate view -->
+  <section id="certificate-popup" style="display: none;">
+    <div class="popup-content">
+      <h2 id="cert-title"></h2>
+      <img id="cert-img" src="" alt="Certificate" />
+      <br />
+      <button id="back-btn" onclick="goBack()">← Back to Certificates</button>
+    </div>
+  </section>
+
+  <script>
+    function viewCertificate(path, title) {
+      document.getElementById("certificates").style.display = "none";
+      document.getElementById("certificate-popup").style.display = "block";
+      document.getElementById("cert-title").innerText = title;
+      document.getElementById("cert-img").src = path;
+    }
+
+    function goBack() {
+      document.getElementById("certificate-popup").style.display = "none";
+      document.getElementById("certificates").style.display = "block";
+    }
+  </script>
+
+  <div style="text-align: center; margin: 30px 0;">
+  <a href="index.html" class="btn-back-home">← Go Back Home</a>
+</div>
+
+<footer>
+  <div class="copyright">
+    <p>Copyright © 2025 Meghashree K. All rights reserved.</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

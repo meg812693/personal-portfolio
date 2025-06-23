@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/348a8156d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/_47230e57-13d2-4301-a2ed-b0643a1f0bb9.jfif" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certificate.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+
+           
+
+           
+        </nav>
+        <div class="header-text">
+           
+            <h1>Hi, I'm <span> Meghashree K </span> <br> Welcome to my Portfolio</h1>
+
+        </div>
+    </div>
+</div>
+
+<!-----------------about--------------->
+
+<!----------------projects------------>
+
+
+
+<!----------certificat------------->
+
+
+
+<!----------contact----------------->
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const triggers = document.querySelectorAll(".lightbox-trigger");
+  const closeBtn = document.querySelector(".close");
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      lightbox.style.display = "block";
+      lightboxImg.src = this.href;
+    });
+  });
+
+  closeBtn.onclick = () => lightbox.style.display = "none";
+  lightbox.onclick = e => { if (e.target === lightbox) lightbox.style.display = "none"; };
+</script>
+
+  <div class="copyright">
+    <p>Copyright © 2025 Meghashree K. All rights reserved.</p>
+  </div>
+</body> 
+</html>
+
+

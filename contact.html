@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Contact | Meghashree K</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="certificate.html">Certificates</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- Contact Section -->
+
+<div id="contact">
+
+<div class="container">
+
+<div class="row">
+
+<div class="contact-left">
+
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-solid fa-envelope"></i>meg812693@gmail.com</p>
+
+<p><i class="fa-solid fa-phone"></i>+91 8296607114</p>
+
+<div class="social-icons">
+
+ <a href="https://www.linkedin.com/in/meghashree-k-2a20a8231/"><i class="fab fa-linkedin"></i></a>
+
+<a href="https://github.com/meg812693"><i class="fab fa-github"></i></a>
+
+ </div>
+
+<br>
+
+<a href="images/Meghashree_Resume (1).pdf" download class="btn btn2">Download CV</a>
+
+</div>
+
+
+ <div class="contact-right">
+
+<form name="submit-to-google-sheet">
+
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+
+ <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
+<button type="submit" class="btn btn2">Submit</button>
+</form>
+
+ <span id="msg"></span>
+
+ </div>
+
+</div>
+
+</div>
+
+ <div class="copyright">
+
+<p>Copyright © 2025 Meghashree K. All rights reserved.</p>
+
+</div>
+
+</div>
+
+
+<!-- Scripts -->
+
+<script>
+
+ var tablinks = document.getElementsByClassName("tab-links");
+
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+
+for(tablink of tablinks){
+
+ tablink.classList.remove("active-link");
+
+ }
+
+ for(tabcontent of tabcontents){
+
+ tabcontent.classList.remove("active-tab");
+
+ }
+
+ event.currentTarget.classList.add("active-link");
+
+document.getElementById(tabname).classList.add("active-tab");
+
+ }
+
+</script>
+
+
+<script>
+
+ var sidemeu=document.getElementById("sidemenu");
+
+function openmenu(){
+
+sidemeu.style.right="0";
+
+ }
+
+ function closemenu(){
+
+ sidemeu.style.right="-200px";
+
+ }
+
+</script>
+
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwHknBmWt5SVT9H8yDY6pchoR1is6KXNkksWLcszfim0UsX5wJznqIKfkjiSdu4xIp4/exec'
+
+const form = document.forms['submit-to-google-sheet']
+
+const msg=document.getElementById("msg")
+
+
+form.addEventListener('submit', e => {
+
+e.preventDefault()
+
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+
+.then(response => {
+
+msg.innerHTML = "Message sent successfully"
+
+setTimeout(function(){
+
+msg.innerHTML=""
+
+},5000)
+
+ form.reset()
+
+})
+
+.catch(error => console.error('Error!', error.message))
+ })
+
+</script>
+
+
+</body>
+
+</html>
+

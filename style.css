@@ -1,0 +1,1074 @@
+body,html {
+    margin: 0;
+      
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /* Aesthetic gradient for the background */
+    background: linear-gradient(135deg, #f0f4f8, #c8e0f0);
+    color: #333; /* Default text color */
+ scroll-behavior: smooth;
+
+}
+
+/* Header Section Styling */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg.webp); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Needed for overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Optional: Add a subtle overlay to the header background image for better text readability */
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1;
+}
+
+.container {
+    padding: 10px 10%;
+    max-width: 1200px; /* Limit container width for better readability */
+    margin: 0 auto; /* Center the container */
+    position: relative; /* Ensure content is above overlay */
+    z-index: 2;
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keep navbar fixed at the top */
+    width: calc(100% - 20%); /* Adjust width to match container padding */
+    top: 20px;
+    left: 10%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 80px; /* Slightly smaller logo for better aesthetic */
+    height: 80px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make logo round if it's a square image */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex; /* Ensure list items are in a row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adjust spacing between nav items */
+}
+
+nav ul li a {
+    color: #007bff; /* A nice blue for links */
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    padding: 5px 0; /* Add padding for better click area */
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* Accent color for hover effect */
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* Slightly further down */
+    transition: width 0.5s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 100px; /* Push text down from the fixed navbar */
+    font-size: 30px;
+    color: #fff; /* White text for header overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
+}
+
+.header-text h1 {
+    font-size: 65px; /* Larger font size for impact */
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.header-text h1 span {
+    color: #ff004f; /* Accent color for the name */
+    font-weight: bold;
+}
+/*----------about--------*/
+body {
+    background: linear-gradient(to bottom, #bae3f0, #dab7ff);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #f2f6f7d7;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#c55edcec;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff004f;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#about {
+    padding: 80px 0;
+    color: #0c0101;
+    
+ 
+  min-height: 100vh; /* Full screen height */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #c55edcec;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color:#c55edcec;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #ff004f;
+    font-size: 14px;
+}
+
+/*..............projects..........*/
+/* Projects Page Specific Styles */
+#projects-page {
+    padding-top: 100px; /* Adjust for fixed navigation */
+    height: calc(100vh - 50px); /* Use height instead of min-height to strictly fill viewport and prevent scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f4f8, #c8e0f0); /* Consistent background */
+    overflow: hidden; /* Prevent scrolling on the entire page */
+    justify-content: space-between; /* Distribute space between title, grid, and button */
+    padding-bottom: 20px; /* Add some padding at the bottom for copyright/button */
+}
+#projects{
+
+padding: 60px 0;
+    background: #e9f5f8;
+    overflow: hidden;
+
+
+}
+
+.projects-list{
+
+background-color: white;
+
+border-radius: 12px;
+
+padding: 30px;
+
+margin: 30px 0;
+
+box-shadow: 0 8px 20px rgba(0, 128, 0, 0.1);
+
+text-align: center;
+
+transition: transform 0.3s ease;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+grid-gap: 40px;
+
+
+
+
+}
+
+.projects-list div{
+
+background: #262626;
+
+padding: 40px;
+
+font-size: 13px;
+
+font-weight: 300;
+
+border-radius: 10px;
+
+transition: background 0.5s, transform 0.5s;
+
+
+}
+
+.projects-list div i{
+
+font-size: 50px;
+
+margin-bottom: 30px;
+
+
+}
+
+.projects-list div h2{
+
+font-size: 30px;
+
+font-weight: 500;
+
+margin-bottom: 15px;
+
+}
+
+.projects-list div a{
+
+text-decoration: none;
+
+color: #fff;
+
+font-size: 12px;
+
+margin-top: 20px;
+
+display: inline-block;
+
+}
+
+.projects-list div:hover{
+
+background: #ff004f;
+
+transform: translateY(-10px);
+
+
+}
+
+.view-btn {
+
+background-color: #28a745;
+
+color: white;
+
+border: none;
+
+padding: 12px 25px;
+
+border-radius: 25px;
+
+font-size: 16px;
+
+cursor: pointer;
+
+box-shadow: 0 5px 10px rgba(0, 128, 0, 0.2);
+
+transition: background 0.3s, transform 0.3s;
+
+}
+
+.view-btn:hover {
+
+background-color: #218838;
+
+transform: scale(1.05);
+
+}
+
+.project-list{
+
+background: #fff;
+
+color: #333;
+
+border-radius: 10px;
+
+padding: 30px;
+
+text-align: center;
+
+margin-bottom: 30px;
+
+box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+
+}
+
+.btn-view {
+
+background: #28a745;
+
+color: white;
+
+padding: 10px 25px;
+
+text-decoration: none;
+
+border-radius: 25px;
+
+display: inline-block;
+
+margin-top: 20px;
+
+transition: background 0.3s ease;
+
+}
+
+.btn-view:hover {
+
+background: #218838;
+
+}
+
+.project-detail-container {
+
+max-width: 1000px;
+
+margin: 50px auto;
+
+padding: 20px;
+
+background: #f2f2f2;
+
+border-radius: 15px;
+
+color: #333;
+
+}
+
+.project-detail-container img {
+
+width: 100%;
+
+max-width: 300px;
+
+margin: 10px;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.demo-images {
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 20px;
+
+justify-content: center;
+
+}
+
+.btn-back {
+
+display: inline-block;
+
+margin-top: 30px;
+
+padding: 10px 20px;
+
+background: #ff004f;
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 5px;
+
+}
+
+.btn-back:hover {
+
+background: #cc0040;
+
+}
+
+/*...................certificates............*/
+/* Certificate cards layout */
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 30px 0;
+  color: #c55edcec;
+}
+
+/* Grid layout */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Certificate card */
+.certificate-card {
+  background-color: #cfebecd1;
+  border: 2px solid #4ab5df;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.144);
+  transition: transform 0.2s;
+}
+
+.certificate-card:hover {
+  transform: scale(1.03);
+}
+
+.certificate-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: rgb(180, 218, 235);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.certificate-card button:hover {
+  background-color: #005fa3;
+}
+
+/* Popup view */
+#certificate-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.popup-content {
+  background: #ffffffc0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 90%;
+}
+
+.popup-content img {
+  max-width: 60%;
+  border-radius: 12px;
+  border: 4px solid #6bb9d0;
+}
+
+#back-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1em;
+  background-color: #ea0f54f7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#back-btn:hover {
+  background-color: #005fa3;
+}
+
+.btn-back-home {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back-home:hover {
+  background-color: #0056b3;
+}
+
+
+/***contACT*****/
+/* Contact Page Specific Styles */
+#contact {
+    padding: 80px 0;
+    background: linear-gradient(to top, #bae3f0, #dab7ff); /* Gradient background for contact section */
+    color: #333;
+     display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px 0;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-left {
+    flex-basis: 40%; /* Give more space to contact info */
+    padding-right: 30px; /* Add some padding to the right */
+}
+
+.contact-left p {
+    margin-top: 25px; /* Slightly reduced margin */
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-left p i {
+    color: #007bff; /* Blue icons */
+    margin-right: 15px;
+    font-size: 24px; /* Slightly smaller icons */
+    width: 30px; /* Fixed width for icon alignment */
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 35px;
+    display: flex; /* Use flexbox for social icons */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 32px; /* Slightly larger icons */
+    color: #3078eb; /* Darker grey for social icons */
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Blue on hover */
+    transform: translateY(-8px); /* Lift effect */
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #267bdc; /* Green for Download CV button */
+    color: #fff;
+    padding: 12px 28px; /* Adjusted padding */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 40px; /* Increased margin from social icons */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+}
+
+.btn.btn2:hover {
+    background: #218838; /* Darker green on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.contact-right {
+      flex: 1;
+    flex-basis: 55%; /* Give more space to the form */
+  margin-top: 50px;  /* <-- Add this line or increase value */
+ 
+
+}
+
+.contact-right form {
+    width: 100%;
+    background: #ffffff; /* White background for the form area */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid #ddd; /* Light grey border */
+    outline: none;
+    background: #f8f8f8; /* Very light grey background */
+    padding: 18px; /* Increased padding */
+    margin: 12px 0; /* Adjusted margin */
+    color: #333; /* Darker text color */
+    font-size: 17px;
+    border-radius: 8px; /* More rounded inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px; /* Minimum height for textarea */
+}
+
+form .btn2 {
+    padding: 15px 60px; /* Adjusted padding for submit button */
+    font-size: 19px;
+    margin-top: 30px; /* Increased margin */
+    cursor: pointer;
+    background: #ff004f; /* Accent color for submit button */
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.2);
+}
+
+form .btn2:hover {
+    background: #e6004c; /* Darker accent on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 79, 0.3);
+}
+
+.copyright {
+  text-align: center;
+  padding: 10px 0;
+  background: #000;
+  color: white;
+  font-size: 14px;
+}
+
+/* Response message style */
+#msg {
+    color: #28a745; /* Green for success messages */
+    margin-top: 15px; /* Adjusted margin */
+    display: block;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/*-----------css for small screens--------*/
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    nav {
+        width: calc(100% - 10%);
+        left: 5%;
+        padding: 10px 20px;
+    }
+
+    .header-text {
+        margin-top: 50%; /* Adjust for smaller screens */
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 45px;
+    }
+
+  nav .fa-bars {
+    display: block;
+    font-size: 35px; /* Increased size */
+    color: #333;
+    cursor: pointer; /* Add cursor for better interaction */
+}
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -250px; /* Hidden by default */
+        width: 250px;
+        height: 100vh;
+        padding-top: 70px;
+        z-index: 2;
+        transition: right 0.5s ease;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 0; /* Space out items */
+    }
+
+    nav ul li a {
+        color: #fff; /* White links in mobile menu */
+    }
+
+   nav ul .fa-xmark {
+    display: block;
+    position: absolute;
+    top: 20px; /* Adjust position */
+    right: 20px; /* Adjust position */
+    cursor: pointer; /* Add cursor */
+    font-size: 40px; /* Increased size */
+    color: #fff;
+}
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 15px;
+    }
+
+    .tab-links {
+        font-size: 17px;
+        margin-right: 25px;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+        padding-right: 0; /* Remove padding */
+    }
+
+    .contact-right {
+        margin-top: 40px; /* Space between contact info and form */
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    /* Project Detail Page Responsive */
+    .project-detail-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .project-detail-container h1 {
+        font-size: 2rem;
+    }
+
+    .demo-images {
+        grid-template-columns: 1fr; /* Single column for demo images */
+        gap: 20px;
+    }
+}
+
+/* ===================== Project Details Page Styling ===================== */
+.project-detail-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #f8f9f4;
+  color: #2d2d2d;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-detail-container h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.project-detail-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.project-detail-container h2 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+.demo-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+   display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Only 2 per row */
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.demo-images div {
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.4s ease;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.demo-images div:hover {
+  transform: translateY(-10px);
+}
+
+.demo-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  max-width: 100%;
+}
+.demo-images img:hover {
+     transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.demo-item {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-item img {
+  
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  cursor: zoom-in;
+
+}
+
+.demo-item img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.demo-item {
+  overflow: visible;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.project-detail-container ul {
+  margin-top: 10px;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+.technologies-section {
+  background-color: #f7f9f9;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #ff0055;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-back:hover {
+  background: #e6004c;
+}
+
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-detail-container {
+    padding: 20px;
+  }
+}
+
+
+/* Flexbox container */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  
+ 
+}
+
+
+
